@@ -1,0 +1,8 @@
+.DS_Store
+.idea
+*.vscode
+/packages/*
+riderModule.iml
+/_ReSharper.Caches/
+bin/
+obj/
