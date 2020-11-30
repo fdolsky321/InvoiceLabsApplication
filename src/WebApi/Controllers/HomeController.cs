@@ -5,9 +5,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using InvoiceLabsApplication.Web.Models;
+using WebApi.Models;
 
-namespace InvoiceLabsApplication.Web.Controllers
+namespace WebApi.Controllers
 {
     public class HomeController : Controller
     {

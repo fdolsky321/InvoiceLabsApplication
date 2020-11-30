@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>InvoiceLabsApplication.Web</RootNamespace>
+    <RootNamespace>WebApi</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -17,12 +17,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Modules\Common" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Domain\Domain\Domain.csproj" />
-    <ProjectReference Include="..\Infrastructure\Infrastructure\Infrastructure.csproj" />
+    <ProjectReference Include="..\Domain\Domain.csproj" />
+    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

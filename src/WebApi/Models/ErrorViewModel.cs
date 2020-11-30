@@ -1,6 +1,6 @@
 using System;
 
-namespace InvoiceLabsApplication.Web.Models
+namespace WebApi.Models
 {
     public class ErrorViewModel
     {

@@ -3,6 +3,7 @@ using System.IO;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
+using Domain.Invoices;
 
 namespace Infrastructure.DataAccess
 {
@@ -11,10 +12,9 @@ namespace Infrastructure.DataAccess
         public InvoiceLabsContext CreateDbContext(string[] args)
         {
             string connectionString = ReadDefaultConnectionStringFromAppSettings();
-            
-            DbContextOptionsBuilder<InvoiceLabsContext> builder = new DbContextOptionsBuilder<InvoiceLabsContext>();
-            Console.WriteLine(connectionString);
-            builder.UseSqlServer(connectionString);
+
+            var builder = new DbContextOptionsBuilder<InvoiceLabsContext>();
+            builder.UseNpgsql(connectionString);
             builder.EnableSensitiveDataLogging();
             return new InvoiceLabsContext(builder.Options);   
         }

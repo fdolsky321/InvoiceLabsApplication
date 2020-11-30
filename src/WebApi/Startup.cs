@@ -2,8 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using InvoiceLabsApplication.Web.Models;
-using InvoiceLabsApplication.Web.Modules;
+using WebApi.Models;
+using WebApi.Modules;
+using WebApi.Modules.Common;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -26,6 +27,8 @@ namespace WebApi
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services) => services
+            .AddAuthorization()
+            .AddCustomContollers()
             .AddPersistence(this.Configuration);
 
             // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

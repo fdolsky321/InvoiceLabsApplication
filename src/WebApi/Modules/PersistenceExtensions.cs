@@ -2,9 +2,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Infrastructure.DataAccess;
 using Microsoft.EntityFrameworkCore;
+using Domain.Invoices;
 
 
-namespace InvoiceLabsApplication.Web.Modules
+namespace WebApi.Modules
 {
     /// <summary>
     ///     Persistence Extensions to isolate EF from Startup.
