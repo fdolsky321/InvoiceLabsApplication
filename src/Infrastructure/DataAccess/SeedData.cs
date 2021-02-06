@@ -15,7 +15,7 @@ namespace Infrastructure.DataAccess
 
             builder.Entity<Invoice>()
                 .HasData(
-                    new
+                    new Invoice
                     {
                         Id = new Guid("bcc6c5c0-ab74-4c4b-9415-2e21b15ba53e"),
                         Identifier = "AAA-111-BBB-222",
@@ -23,7 +23,11 @@ namespace Infrastructure.DataAccess
                         Description = "First testing invoice",
                         InvoiceDate = DateTime.Now,
                         CurrencyCode = "CZK",
-                        Paid = false
+                        Paid = false,
+                        CreatedAt = DateTime.Now,
+                        CreatedBy = "Frantisek Dolsky",
+                        ModifiedAt = DateTime.Now,
+                        ModifiedBy = "Frantisek Dolsky"
                     }
                 ) ;
         }

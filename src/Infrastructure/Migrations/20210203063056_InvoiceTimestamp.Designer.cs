@@ -3,15 +3,17 @@ using System;
 using Infrastructure.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(InvoiceLabsContext))]
-    partial class InvoiceLabsContextModelSnapshot : ModelSnapshot
+    [Migration("20210203063056_InvoiceTimestamp")]
+    partial class InvoiceTimestamp
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -63,14 +65,11 @@ namespace Infrastructure.Migrations
                         new
                         {
                             Id = new Guid("bcc6c5c0-ab74-4c4b-9415-2e21b15ba53e"),
-                            CreatedAt = new DateTime(2021, 2, 3, 7, 46, 47, 330, DateTimeKind.Local).AddTicks(8634),
-                            CreatedBy = "Frantisek Dolsky",
+                            CreatedAt = new DateTime(2021, 2, 3, 7, 30, 55, 803, DateTimeKind.Local).AddTicks(9820),
                             CurrencyCode = "CZK",
                             Description = "First testing invoice",
                             Identifier = "AAA-111-BBB-222",
-                            InvoiceDate = new DateTime(2021, 2, 3, 7, 46, 47, 328, DateTimeKind.Local).AddTicks(1172),
-                            ModifiedAt = new DateTime(2021, 2, 3, 7, 46, 47, 331, DateTimeKind.Local).AddTicks(490),
-                            ModifiedBy = "Frantisek Dolsky",
+                            InvoiceDate = new DateTime(2021, 2, 3, 7, 30, 55, 799, DateTimeKind.Local).AddTicks(7871),
                             Paid = false,
                             TotalCharges = 123.0m
                         });
